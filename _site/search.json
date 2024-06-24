@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site I am Ansh Kare a student at Green Level and this is my Data science project for David Kane’s class"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Income VS Degree",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  }
+]
