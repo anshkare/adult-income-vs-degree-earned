@@ -11,14 +11,17 @@ This is a Quarto website.
 library(tidyverse)
 #| message: false
 library(lubridate)
+library(dplyr)
 
 # Load the CSV file into R
-data <- read.csv("Users/anshkare/Downloads/archive (3).zip/adult.csv")
+data <- read_csv("adult.csv")
+```
+```{r}
 
-# Create the grouped bar plot
-ggplot(data, aes(x = education, fill = income)) +
-    geom_bar(position = "dodge") +
+ggplot(data, aes(x = Bachelors, fill= income)) +
+    geom_bar() +
     labs(title = "Income Levels by Education",
          x = "Education Level",
-         y = "Count") +
-    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+         y = "Count")
+```
+
