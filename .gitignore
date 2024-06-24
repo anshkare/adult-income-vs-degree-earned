@@ -3,5 +3,6 @@
 .RData
 .Ruserdata
 income-vs-degree.Rproj
+_publish.yml
 
 /.quarto/
