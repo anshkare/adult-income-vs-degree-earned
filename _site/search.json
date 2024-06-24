@@ -5,12 +5,5 @@
     "title": "About",
     "section": "",
     "text": "About this site I am Ansh Kare a student at Green Level and this is my Data science project for David Kane’s class"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Income VS Degree",
-    "section": "",
-    "text": "This is a Quarto website.\n\nLoad necessary libraries\nlibrary(tidyverse) #| message: false library(lubridate)\n\n\nLoad the CSV file into R\ndata &lt;- read.csv(“Users/anshkare/Downloads/archive (3).zip/adult.csv”)\n\n\nCreate the grouped bar plot\nggplot(data, aes(x = education, fill = income)) + geom_bar(position = “dodge”) + labs(title = “Income Levels by Education”, x = “Education Level”, y = “Count”) + theme(axis.text.x = element_text(angle = 45, hjust = 1))"
   }
 ]

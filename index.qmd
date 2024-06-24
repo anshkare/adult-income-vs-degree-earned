@@ -4,22 +4,23 @@ execute:
   echo: false
 ---
 
-This is a Quarto website.
 
 ```{r}
-# Load necessary libraries
-library(tidyverse)
-#| message: false
-library(lubridate)
-library(dplyr)
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(lubridate)
+  library(dplyr)
+})
 
-# Load the CSV file into R
-data <- read_csv("adult.csv")
+data <- read_csv("adult.csv", show_col_types = FALSE)
+
 ```
 ```{r}
-
-ggplot(data, aes(x = Bachelors, fill= income)) +
-    geom_bar() +
+data <- data |>
+    rename(income = `<=50K`)
+ggplot(data, aes(x = Bachelors, fill = income)) +
+    geom_bar(position = "dodge") +
+    scale_x_discrete(guide = guide_axis(check.overlap = TRUE))+
     labs(title = "Income Levels by Education",
          x = "Education Level",
          y = "Count")

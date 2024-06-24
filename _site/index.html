@@ -108,15 +108,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#load-necessary-libraries" id="toc-load-necessary-libraries" class="nav-link active" data-scroll-target="#load-necessary-libraries">Load necessary libraries</a></li>
-  <li><a href="#load-the-csv-file-into-r" id="toc-load-the-csv-file-into-r" class="nav-link" data-scroll-target="#load-the-csv-file-into-r">Load the CSV file into R</a></li>
-  <li><a href="#create-the-grouped-bar-plot" id="toc-create-the-grouped-bar-plot" class="nav-link" data-scroll-target="#create-the-grouped-bar-plot">Create the grouped bar plot</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -140,21 +132,17 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This is a Quarto website.</p>
-<section id="load-necessary-libraries" class="level1">
-<h1>Load necessary libraries</h1>
-<p>library(tidyverse) #| message: false library(lubridate)</p>
-</section>
-<section id="load-the-csv-file-into-r" class="level1">
-<h1>Load the CSV file into R</h1>
-<p>data &lt;- read.csv(“Users/anshkare/Downloads/archive (3).zip/adult.csv”)</p>
-</section>
-<section id="create-the-grouped-bar-plot" class="level1">
-<h1>Create the grouped bar plot</h1>
-<p>ggplot(data, aes(x = education, fill = income)) + geom_bar(position = “dodge”) + labs(title = “Income Levels by Education”, x = “Education Level”, y = “Count”) + theme(axis.text.x = element_text(angle = 45, hjust = 1))</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
