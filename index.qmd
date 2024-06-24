@@ -1,9 +1,24 @@
 ---
 title: "Income VS Degree"
+execute: 
+  echo: false
 ---
 
 This is a Quarto website.
 
+```{r}
+# Load necessary libraries
+library(tidyverse)
+#| message: false
+library(lubridate)
 
+# Load the CSV file into R
+data <- read.csv("Users/anshkare/Downloads/archive (3).zip/adult.csv")
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+# Create the grouped bar plot
+ggplot(data, aes(x = education, fill = income)) +
+    geom_bar(position = "dodge") +
+    labs(title = "Income Levels by Education",
+         x = "Education Level",
+         y = "Count") +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))
