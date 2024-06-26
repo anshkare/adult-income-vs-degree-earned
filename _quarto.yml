@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Income VS Degree.."
+  title: "Income VS Degree"
   navbar:
     left:
       - href: index.qmd

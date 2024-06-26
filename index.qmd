@@ -15,14 +15,19 @@ suppressPackageStartupMessages({
 data <- read_csv("adult.csv", show_col_types = FALSE)
 
 ```
+
 ```{r}
 data <- data |>
-    rename(income = `<=50K`)
-ggplot(data, aes(x = Bachelors, fill = income)) +
-    geom_bar(position = "dodge") +
-    scale_x_discrete(guide = guide_axis(check.overlap = TRUE))+
-    labs(title = "Income Levels by Education",
+    rename(income = `<=50K`)|>
+      ggplot(data, mapping =aes(x = Bachelors, fill = income)) +
+      geom_bar(position = "dodge", aes(color= Male), width = 0.6) +
+      scale_color_manual(values = c("green", "purple"))+
+      scale_x_discrete(guide = guide_axis(check.overlap = TRUE), limits = c("Preschool", "1st-4th", "5th-6th", "7th-8th", "9th", "10th", "11th", "12th", "HS-grad", "Prof-school", "Some-college", "Assoc-voc", "Assoc-acdm", "Bachelors", "Masters", "Doctorate"))+
+        labs(title = "Income Levels by Education", subtitle = "Results might surprise you. Up to 4 occurences per education level recorded",
          x = "Education Level",
-         y = "Count")
+         y = "Count", colour = c("Gender", "Anual Income"))+
+  theme(plot.margin = unit(c(1, 1, 1.5, 1.5), "cm"), axis.text.x = element_text(angle = 45, hjust = 1, size = 10))
+data    
 ```
 
+The correlation between degree earned compared to income earned might surprise you. The following data was pulled from kaggle, a dataset of demographic and employment information from age, race, and gender, to hours worked per week to also degree earned. Each level of education has up to 4 bars: 2 per gender, and 2 for over 50k earned or 50k and less earned. The relevant data used was degree earned, salary earned, and gender. For example HS-grad has 4 occurences of both male, female, >50k, and <=50k. The X axis being the level of education and the y axis being the number of occurences. The legend shows the bar plots of which color meant which occurence of salary, and also the gender of the occurences of said income. Other factors like relationship status, and working industry are important, but earning at minimal a college degree seems enough to make atleast 50k income.

@@ -2,8 +2,8 @@
 title: "About"
 ---
 
-About this site
 I am Ansh Kare a student at Green Level and this is my Data science project for David Kane's class
+
 Email: aekare03@gmail.com
 
 [My Github](https://github.com/anshkare/adult-income-vs-degree-earned)
