@@ -132,6 +132,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Did you know past a HS diploma an income of 50k or greater would be determined by other factors than education level? This dataset pulled from kaggle, unveiling a fascinating snapshot of adult demographics, looks at 32,560 individuals from various walks of life. With ages ranging from 17 to 90, it captures a rich diversity of educational backgrounds, occupations, and marital statuses. Interestingly, the average workweek clocks in at about 40 hours, with occupations spanning from executive managerial roles to handlers and cleaners. While a significant portion of the dataset comprises U.S. citizens, there are also individuals from countries like Cuba, reflecting the multicultural tapestry of the workforce. Notably, the income distribution shows a stark division, shedding light on the socioeconomic factors at play.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -227,7 +228,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/anshk\.quarto\.pub\/income-vs-degree");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

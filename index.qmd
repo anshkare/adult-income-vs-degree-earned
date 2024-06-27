@@ -3,7 +3,7 @@ title: "Income VS Degree"
 execute: 
   echo: false
 ---
-
+Did you know past a HS diploma an income of 50k or greater would be determined by other factors than education level? This dataset pulled from kaggle, unveiling a fascinating snapshot of adult demographics, looks at 32,560 individuals from various walks of life. With ages ranging from 17 to 90, it captures a rich diversity of educational backgrounds, occupations, and marital statuses. Interestingly, the average workweek clocks in at about 40 hours, with occupations spanning from executive managerial roles to handlers and cleaners. While a significant portion of the dataset comprises U.S. citizens, there are also individuals from countries like Cuba, reflecting the multicultural tapestry of the workforce. Notably, the income distribution shows a stark division, shedding light on the socioeconomic factors at play.
 
 ```{r}
 suppressPackageStartupMessages({
@@ -26,7 +26,9 @@ data <- data |>
         labs(title = "Income Levels by Education", subtitle = "Results might surprise you. Up to 4 occurences per education level recorded",
          x = "Education Level",
          y = "Count", colour = c("Gender", "Anual Income"))+
-  theme(plot.margin = unit(c(1, 1, 1.5, 1.5), "cm"), axis.text.x = element_text(angle = 45, hjust = 1, size = 10))
+  theme(plot.margin = unit(c(1, 1, 1.5, 1.5), "cm"), axis.text.x = element_text(angle = 45, hjust = 1, size = 10))+
+  scale_y_continuous(breaks = c(1000,2000,3000,4000,5000))
+
 data    
 ```
 
